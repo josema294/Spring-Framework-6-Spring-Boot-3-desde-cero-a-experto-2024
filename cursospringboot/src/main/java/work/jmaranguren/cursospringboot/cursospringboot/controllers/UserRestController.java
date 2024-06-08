@@ -1,15 +1,18 @@
 package work.jmaranguren.cursospringboot.cursospringboot.controllers;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import work.jmaranguren.cursospringboot.cursospringboot.models.User;
 import work.jmaranguren.cursospringboot.cursospringboot.models.dto.UserDTO;
-
-import java.util.Map;
-import java.util.HashMap;
 
 
 @RestController
@@ -54,6 +57,26 @@ public class UserRestController {
        
         return userDTO;
     }
+
     
+    @GetMapping("/detailslsit")
+    public List<UserDTO> detailslsit() {
+
+       UserDTO user1 = new UserDTO("dto 1", new User("Menganito", "Gonzalez"));
+       UserDTO user2 = new UserDTO("dto 2", new User("Fulanito", "Perez"));
+       UserDTO user3 = new UserDTO("dto 3", new User("Pepeito", "Dieguez"));
+
+    //    List <UserDTO> lista = new ArrayList<>();
+    //    lista.add(user1);
+    //    lista.add(user2);
+    //    lista.add(user3);
+
+    List <UserDTO> lista = Arrays.asList(user1,user2,user3);
+    
+
+       
+        return lista;
+    }
+
     
 }
