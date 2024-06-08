@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import work.jmaranguren.cursospringboot.cursospringboot.models.User;
+import work.jmaranguren.cursospringboot.cursospringboot.models.dto.UserDTO;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -40,6 +41,18 @@ public class UserRestController {
         body.put("user", user);
 
         return body;
+    }
+
+        /* 
+     * Se crea un nuevo endpoint details, esta vez usando una clase del dTO de la clase 18
+     */
+    @GetMapping("/details3")
+    public UserDTO detailsDTO() {
+
+       UserDTO userDTO = new UserDTO("dto example", new User("Menganito", "De la Pradera"));
+
+       
+        return userDTO;
     }
     
     
