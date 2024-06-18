@@ -25,3 +25,5 @@ replay_pid*
 cursospringboot/Dockerfile
 cursospringboot/.dockerignore
 cursospringboot/compose.yaml
+.vscode/launch.json
+.vscode/settings.json
