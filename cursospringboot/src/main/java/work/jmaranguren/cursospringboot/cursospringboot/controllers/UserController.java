@@ -1,12 +1,13 @@
 package work.jmaranguren.cursospringboot.cursospringboot.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+
 
 import work.jmaranguren.cursospringboot.cursospringboot.models.User;
 
@@ -36,12 +37,23 @@ public class UserController {
     @GetMapping("/list")
     public String list(ModelMap model) {
 
-        List <User> users = new ArrayList<>();
+        //List <User> users = new ArrayList<>();
+       
+        var users = usersModel ();
+
         
         model.addAttribute("title","Lista");
         model.addAttribute("users", users);
         return "list";
     }
+
+    public List<User> usersModel (){
+        
+       var users = Arrays.asList(new User ("pepa","Tolomeo","1@2"), new User ("Lalo", "Perez","3@4"), new User ("Andres", "Herrero"));
+        return users;
+    }
+
+
     
 
     
