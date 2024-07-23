@@ -3,6 +3,7 @@ package work.jmaranguren.cursospringboot.cursospringboot.controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.servlet.http.HttpServletRequest;
 import work.jmaranguren.cursospringboot.cursospringboot.models.dto.ParamDTO;
 import work.jmaranguren.cursospringboot.cursospringboot.models.dto.ParamMixDTO;
 
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api/params")
-public class RequestPAramsController {
+public class RequestParamsController {
 
     @GetMapping("/foo")
     public ParamDTO foo(@RequestParam(required = false, defaultValue = "hola que tal") String message) {
@@ -34,6 +35,21 @@ public ParamMixDTO getMethodName(@RequestParam String text, @RequestParam Intege
     return param;
 }
 
+    @GetMapping("/request")
+    public ParamMixDTO request(HttpServletRequest request) {
+        Integer  code= 0;
+        var params = new    ParamMixDTO();
+        try {
+            code = Integer.parseInt(request.getParameter("code"));
+            
+        } catch (NumberFormatException e) {
+            // TODO: handle exception
+        }
+        params.setCod(code);
+        params.setMessage(request.getParameter("message"));
+        return params;
+        
+    }
     
     
 }
