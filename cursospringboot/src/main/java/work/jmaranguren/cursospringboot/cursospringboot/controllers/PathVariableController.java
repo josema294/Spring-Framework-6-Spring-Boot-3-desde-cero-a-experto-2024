@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 import java.util.HashMap;
 
+import work.jmaranguren.cursospringboot.cursospringboot.models.User;
 import work.jmaranguren.cursospringboot.cursospringboot.models.dto.ParamDTO;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RestController
 @RequestMapping("api/var")
@@ -28,7 +32,15 @@ public class PathVariableController {
         json.put("product",product);
         json.put("id",id);
         return json;
-     }
-     
+    }
+    
+    @PostMapping("/create")
+    public User create(@RequestBody User user) {
+        
+        
+        return user;
+    }
+    
+
 
 }
