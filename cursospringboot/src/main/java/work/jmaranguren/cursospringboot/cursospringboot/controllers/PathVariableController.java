@@ -1,5 +1,6 @@
 package work.jmaranguren.cursospringboot.cursospringboot.controllers;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 @RequestMapping("api/var")
 public class PathVariableController {
+
+    @Value("${config.username}")
+    private String username;
+    @Value("${config.message}")
+    private String message;
+    @Value("${config.listOfValues}")
+    private String[] listOfValues;
+
 
     @GetMapping("/baz/{message}")
     public ParamDTO baz (@PathVariable String message){
@@ -41,6 +50,17 @@ public class PathVariableController {
         return user;
     }
     
+   @GetMapping("/values")
+    public Map <String, Object> values(){
 
+        Map<String, Object> json = new HashMap<String, Object>();
+        json.put("username", 12323);
+        json.put("message", message);
+        json.put("listOfValues", listOfValues);
+
+        return json ;
+            
+        
+    }
 
 }
