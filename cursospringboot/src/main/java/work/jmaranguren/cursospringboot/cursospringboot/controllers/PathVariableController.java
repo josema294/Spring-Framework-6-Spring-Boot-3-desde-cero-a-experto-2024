@@ -27,7 +27,12 @@ public class PathVariableController {
     private String[] listOfValues;
     @Value("#{ '${config.listOfValues}'.toUpperCase.split(',')} ")
     private List<String> valueList;
-
+    @Value("#{${config.valuesMap}}")
+    private Map<String,Object> valuesMap;
+    @Value("#{${config.valuesMap}.product}")
+    private String productName;
+    @Value("#{${config.valuesMap}.price}")
+    private String productPrice;
 
 
     @GetMapping("/baz/{message}")
@@ -62,8 +67,10 @@ public class PathVariableController {
         json.put("message", message);
         json.put("listOfValues", listOfValues);
         json.put("valueList", valueList);
+        json.put("valuesMap", valuesMap);
+        json.put("productPrice", productPrice);
+        json.put("productName", productName);
         
-
         return json ;
             
         
