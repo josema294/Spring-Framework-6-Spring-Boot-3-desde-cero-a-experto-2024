@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.List;
 
 import work.jmaranguren.cursospringboot.cursospringboot.models.User;
 import work.jmaranguren.cursospringboot.cursospringboot.models.dto.ParamDTO;
@@ -24,6 +25,9 @@ public class PathVariableController {
     private String message;
     @Value("${config.listOfValues}")
     private String[] listOfValues;
+    @Value("#{ '${config.listOfValues}'.toUpperCase.split(',')} ")
+    private List<String> valueList;
+
 
 
     @GetMapping("/baz/{message}")
@@ -57,10 +61,15 @@ public class PathVariableController {
         json.put("username", 12323);
         json.put("message", message);
         json.put("listOfValues", listOfValues);
+        json.put("valueList", valueList);
+        
 
         return json ;
             
         
     }
+
+
+
 
 }
