@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot.cursospringboot.models;
+package work.jmaranguren.cursospringboot.models;
 
 public class User {
 

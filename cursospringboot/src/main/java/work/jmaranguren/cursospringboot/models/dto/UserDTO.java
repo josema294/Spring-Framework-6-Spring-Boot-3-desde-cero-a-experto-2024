@@ -1,6 +1,6 @@
-package work.jmaranguren.cursospringboot.cursospringboot.models.dto;
+package work.jmaranguren.cursospringboot.models.dto;
 
-import work.jmaranguren.cursospringboot.cursospringboot.models.User;
+import work.jmaranguren.cursospringboot.models.User;
 
 public class UserDTO {
 

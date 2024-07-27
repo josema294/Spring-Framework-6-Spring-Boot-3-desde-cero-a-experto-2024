@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot.cursospringboot.models.dto;
+package work.jmaranguren.cursospringboot.models.dto;
 
 public class ParamDTO {
 

@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot.cursospringboot;
+package work.jmaranguren.cursospringboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

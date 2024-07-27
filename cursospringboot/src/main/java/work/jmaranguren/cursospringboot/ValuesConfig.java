@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot.cursospringboot;
+package work.jmaranguren.cursospringboot;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;

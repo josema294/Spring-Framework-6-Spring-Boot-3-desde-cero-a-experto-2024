@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot.cursospringboot.controllers;
+package work.jmaranguren.cursospringboot.controllers;
 
 import java.util.List;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
-import work.jmaranguren.cursospringboot.cursospringboot.models.User;
+import work.jmaranguren.cursospringboot.models.User;
 
 
 @Controller

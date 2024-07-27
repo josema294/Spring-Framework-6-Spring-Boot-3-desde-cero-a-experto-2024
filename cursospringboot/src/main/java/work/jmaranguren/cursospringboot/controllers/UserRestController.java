@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot.cursospringboot.controllers;
+package work.jmaranguren.cursospringboot.controllers;
 
 
 import java.util.Arrays;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import work.jmaranguren.cursospringboot.cursospringboot.models.User;
-import work.jmaranguren.cursospringboot.cursospringboot.models.dto.UserDTO;
+import work.jmaranguren.cursospringboot.models.User;
+import work.jmaranguren.cursospringboot.models.dto.UserDTO;
 
 
 @RestController

@@ -1,11 +1,11 @@
-package work.jmaranguren.cursospringboot.cursospringboot.controllers;
+package work.jmaranguren.cursospringboot.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.servlet.http.HttpServletRequest;
-import work.jmaranguren.cursospringboot.cursospringboot.models.dto.ParamDTO;
-import work.jmaranguren.cursospringboot.cursospringboot.models.dto.ParamMixDTO;
+import work.jmaranguren.cursospringboot.models.dto.ParamDTO;
+import work.jmaranguren.cursospringboot.models.dto.ParamMixDTO;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot.cursospringboot;
+package work.jmaranguren.cursospringboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

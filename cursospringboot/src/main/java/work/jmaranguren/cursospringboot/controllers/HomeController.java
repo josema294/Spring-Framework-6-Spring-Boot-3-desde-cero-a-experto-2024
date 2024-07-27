@@ -1,8 +1,9 @@
-package work.jmaranguren.cursospringboot.cursospringboot.controllers;
+package work.jmaranguren.cursospringboot.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import work.jmaranguren.cursospringboot.models.User;
 
 
 @Controller
@@ -20,5 +21,5 @@ public class HomeController {
         return"forward:list";
     }
     
-
+    
 }
