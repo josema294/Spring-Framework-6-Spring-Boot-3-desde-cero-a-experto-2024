@@ -15,10 +15,11 @@ El objetivo es que pueda servir de referencia, unificando en un repositorio este
 
 ## Estructura del Proyecto
 Para la realizacion se ha seguido la siguiente forma de trabajar. 
-1. Se crea un proyeto cuando asi resutla apropiado siguiendo el curso, esto pasa principalmente con secciones nuevas del curso por ejemplo, donde en vez de continuar con el proyecto de una seccion anterior se decide partir de un proyecto nuevo.
+
+1. El proyecto esta dividido en carpetas [seccion{I}] , cada una de las cuales corresponde a uno de los proyectos que se crean en el curso. Estos son proyectos maven con su pom individual, por lo que cada uno puede ser ejecutado por separado.
 2. Cada ejercicio una vez realizado se commitea con el siguiente patron [Clase {'Aqui el numero de clase que se ha finalizado'}]
 3. Puede haber commits que no reflejan directamente una clase, por ejemplo este commit en el que actualizo el README, pero la inmensa mayoria corresponden a clases.
-4. La estructura es incremental por lo tando, a cada commit mas avanzado se incluyen cosas nuevas pero sigues teniendo cosas ya hechas en el curso.
+4. La estructura es incremental por lo tando, a cada commit mas avanzado se incluyen cosas nuevas pero sigues teniendo cosas ya hechas en el curso. Si viajas a los primeros commits, te puedes encontrar el proyecto con diferencias, ya que reflejaba la estructuras de como estaba en esas clase. Por ejemplo, cuando solo habia un proyecto en el curso, todo el reposiotrio de git correspondia a este proyecto en los primeros commits, pero cuando se tiene que crear mas proyectos se varia la estructura conteniendo en cada carpeta el suyo propio.
 5. Si quieres ver el estado del curso en un momento mas antiguo, lo puedes hacer moviendote por el historial de commits:
    
 

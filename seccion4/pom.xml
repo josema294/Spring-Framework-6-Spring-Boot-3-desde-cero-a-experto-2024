@@ -5,27 +5,34 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.0</version>
+		<version>3.3.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>work.jmaranguren.cursospringboot</groupId>
-	<artifactId>cursospringboot</artifactId>
+	<groupId>work.jmaranguren</groupId>
+	<artifactId>curso-springboot-seccion4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cursospringboot</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Curso Spring Boot seccion 4</name>
+	<description>Seccion 4, centrado en Inyeccion de dependencias</description>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
