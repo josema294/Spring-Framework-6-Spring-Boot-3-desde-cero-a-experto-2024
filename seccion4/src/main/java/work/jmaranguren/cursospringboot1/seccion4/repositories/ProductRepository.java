@@ -11,10 +11,10 @@ public class ProductRepository {
 
     public ProductRepository(List<Product> data) {
         this.data = Arrays.asList(
-            new Product(1L, "Memoria cortsair 32", 300L),
-            new Product(2L, "Procesador intel", 900L),
+            new Product(1L, "Memoria cortsair 32", 300.0),
+            new Product(2L, "Procesador intel", 900.0),
             new Product(3L, "HDD", 90L),
-            new Product(4L, "Teclado Razer", 60L)
+            new Product(4L, "Teclado Razer", 60.0)
         );
     }
 

@@ -5,10 +5,13 @@ public class Product {
     private Long id;
     private String name;
     private Long price;
-    public Product(Long id, String name, Long price) {
+    public Product(Long id, String name, double d) {
         this.id = id;
         this.name = name;
-        this.price = price;
+        this.price = d;
+    }
+    public Product(long id2, String name2, double d) {
+        //TODO Auto-generated constructor stub
     }
     public Long getId() {
         return id;
@@ -25,8 +28,8 @@ public class Product {
     public Long getPrice() {
         return price;
     }
-    public void setPrice(Long price) {
-        this.price = price;
+    public void setPrice(double d) {
+        this.price = d;
     }
 
     
