@@ -8,17 +8,19 @@ import work.jmaranguren.cursospringboot1.seccion4.repositories.ProductRepository
 
 public class ProductService {
 
-    private ProductRepository repository = new ProductRepository(null);
+    private ProductRepository repository = new ProductRepository();
     
     public List<Product> findAll(){
-        return repository.findAll().stream().map(p ->{
+
+        List<Product> data = repository.findAll();
+        return data.stream().map(p ->{
             p.setPrice(p.getPrice() * 1.25);
             return p;
         }).collect(Collectors.toList());
     }
 
-    public Product findById() {
-        return null;
+    public Product findById(Long id) {
+        return repository.findById(id);
     }
 
 }

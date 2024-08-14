@@ -9,7 +9,7 @@ public class ProductRepository {
 
     private List <Product> data;
 
-    public ProductRepository(List<Product> data) {
+    public ProductRepository() {
         this.data = Arrays.asList(
             new Product(1L, "Memoria cortsair 32", 300.0),
             new Product(2L, "Procesador intel", 900.0),
