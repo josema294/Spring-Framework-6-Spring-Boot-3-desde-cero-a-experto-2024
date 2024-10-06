@@ -13,11 +13,13 @@ public class ProductService {
     public List<Product> findAll(){
 
         List<Product> data = repository.findAll();
-        return data.stream().map(p ->{
-            p.setPrice(p.getPrice() * 1.25);
-            return p;
+        // Retornamos una copia de los productos con el precio modificado
+        return data.stream().map(p -> {
+            Product productoConIva = new Product(p.getId(), p.getName(), p.getPrice() * 1.25);
+            return productoConIva;
         }).collect(Collectors.toList());
     }
+    
 
     public Product findById(Long id) {
         return repository.findById(id);
