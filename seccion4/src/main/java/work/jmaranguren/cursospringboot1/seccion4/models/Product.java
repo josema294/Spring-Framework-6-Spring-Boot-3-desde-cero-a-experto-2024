@@ -1,6 +1,6 @@
 package work.jmaranguren.cursospringboot1.seccion4.models;
 
-public class Product {
+public class Product implements Cloneable {
 
     private Long id;
     private String name;
@@ -27,6 +27,16 @@ public class Product {
     }
     public void setPrice(double d) {
         this.price = d;
+    }
+
+    public Object clonar(){
+
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            return new Product(id, name, price);
+        }   
     }
 
     

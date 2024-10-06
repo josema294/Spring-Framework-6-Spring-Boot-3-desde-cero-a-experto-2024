@@ -14,9 +14,16 @@ public class ProductService {
 
         List<Product> data = repository.findAll();
         // Retornamos una copia de los productos con el precio modificado
+     
         return data.stream().map(p -> {
-            Product productoConIva = new Product(p.getId(), p.getName(), p.getPrice() * 1.25);
-            return productoConIva;
+            //Product productoConIva = new Product(p.getId(), p.getName(), p.getPrice() * 1.25);
+            //return productoConIva;
+            double conIVA = p.getPrice() *1.25;
+            Product clonado = (Product) p.clonar();
+            clonado.setPrice(conIVA);
+            return clonado;
+
+
         }).collect(Collectors.toList());
     }
     
