@@ -19,8 +19,6 @@ public class RequestParamsController {
     public ParamDTO foo(@RequestParam(required = false, defaultValue = "hola que tal") String message) {
         
         var param = new ParamDTO();
-        //Con el defaultvalue ya no hace falta comprobar si es nulo o no
-        //param.setMessage(message==null?"Hola no hay parametro que pasar":message);
         param.setMessage(message==null?"Hola no hay parametro que pasar":message);
 
         return param;
@@ -43,7 +41,7 @@ public ParamMixDTO getMethodName(@RequestParam String text, @RequestParam Intege
             code = Integer.parseInt(request.getParameter("code"));
             
         } catch (NumberFormatException e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
         params.setCod(code);
         params.setMessage(request.getParameter("message"));
