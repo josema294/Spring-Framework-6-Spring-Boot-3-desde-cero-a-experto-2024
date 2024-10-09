@@ -1,17 +1,24 @@
 package work.jmaranguren.cursospringboot1.seccion4.services;
 
+
 import java.util.List;
 import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import work.jmaranguren.cursospringboot1.seccion4.models.Product;
 import work.jmaranguren.cursospringboot1.seccion4.repositories.ProductRepositoryImpl;
 
+@Component
 public class ProductServiceImpl implements ProductService{
 
-    private ProductRepositoryImpl repository = new ProductRepositoryImpl();
+    @Autowired
+    private ProductRepositoryImpl repository;
     
 
     public List<Product> findAll(){
+
 
         List<Product> data = repository.findAll();
         // Retornamos una copia de los productos con el precio modificado
