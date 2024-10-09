@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import work.jmaranguren.cursospringboot1.seccion4.models.Product;
-import work.jmaranguren.cursospringboot1.seccion4.services.ProductServiceImpl;
+import work.jmaranguren.cursospringboot1.seccion4.services.ProductService;
 
 @RestController
 public class SomeController {
 
     @Autowired
-    private ProductServiceImpl productService;
+    private ProductService productService;
 
     @GetMapping
     @RequestMapping("/api")

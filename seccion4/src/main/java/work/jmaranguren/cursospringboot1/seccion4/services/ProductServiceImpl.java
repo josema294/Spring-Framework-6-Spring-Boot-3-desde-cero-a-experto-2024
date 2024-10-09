@@ -14,7 +14,7 @@ import work.jmaranguren.cursospringboot1.seccion4.repositories.ProductRepository
 public class ProductServiceImpl implements ProductService{
 
     @Autowired
-    private ProductRepositoryImpl repository;
+    private ProductRepository repository;
     
 
     public List<Product> findAll(){
