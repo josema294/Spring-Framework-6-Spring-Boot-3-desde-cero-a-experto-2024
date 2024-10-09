@@ -13,9 +13,19 @@ import work.jmaranguren.cursospringboot1.seccion4.repositories.ProductRepository
 @Service
 public class ProductServiceImpl implements ProductService{
 
-    @Autowired
     private ProductRepository repository;
-    
+
+    //@Autowired {por constructor, y de hecho no es necesario el @autowired si inyectas por constructor, ya que lo hace de forma automatica}
+    public ProductServiceImpl(ProductRepository repository) {
+        this.repository = repository;
+    }
+
+    // @Autowired   {por setter}
+    // public void setRepository(ProductRepository repository) {
+    //     this.repository = repository;
+    // }
+
+
 
     public List<Product> findAll(){
 
@@ -37,6 +47,8 @@ public class ProductServiceImpl implements ProductService{
     public Product findById(Long id) {
         return repository.findById(id);
     }
+
+
 
 
 }
