@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import work.jmaranguren.cursospringboot1.seccion4.models.Product;
-import work.jmaranguren.cursospringboot1.seccion4.repositories.ProductRepositoryImpl;
+import work.jmaranguren.cursospringboot1.seccion4.repositories.ProductRepository;
 
-@Component
+@Service
 public class ProductServiceImpl implements ProductService{
 
     @Autowired
@@ -27,6 +27,7 @@ public class ProductServiceImpl implements ProductService{
             double conIVA = p.getPrice() *1.25;
             Product clonado = (Product) p.clonar();
             clonado.setPrice(conIVA);
+            System.out.println("ProductServiceImpl.findAll()");
             return clonado;
 
 
