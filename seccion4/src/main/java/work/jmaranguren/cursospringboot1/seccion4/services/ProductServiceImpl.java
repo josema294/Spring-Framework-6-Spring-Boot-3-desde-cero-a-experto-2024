@@ -4,7 +4,7 @@ package work.jmaranguren.cursospringboot1.seccion4.services;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import work.jmaranguren.cursospringboot1.seccion4.models.Product;
