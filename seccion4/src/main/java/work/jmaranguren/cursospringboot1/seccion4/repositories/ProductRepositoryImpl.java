@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import work.jmaranguren.cursospringboot1.seccion4.models.Product;
 
-@Repository
+@Repository("productList")
 @Primary
 public class ProductRepositoryImpl implements ProductRepository {
 

@@ -3,11 +3,12 @@ package work.jmaranguren.cursospringboot1.seccion4.repositories;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import work.jmaranguren.cursospringboot1.seccion4.models.Product;
 
-@Repository
+@Repository("productFoo")
 public class ProductRepositoryFoo implements ProductRepository{
 
     @Override

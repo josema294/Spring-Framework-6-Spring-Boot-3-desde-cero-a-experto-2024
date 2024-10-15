@@ -4,7 +4,8 @@ package work.jmaranguren.cursospringboot1.seccion4.services;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import work.jmaranguren.cursospringboot1.seccion4.models.Product;
@@ -12,13 +13,14 @@ import work.jmaranguren.cursospringboot1.seccion4.repositories.ProductRepository
 
 @Service
 public class ProductServiceImpl implements ProductService{
+        // @Autowired
+        // @Qualifier("productFoo")
+        private ProductRepository repository;
 
-    private ProductRepository repository;
-
-    //@Autowired {por constructor, y de hecho no es necesario el @autowired si inyectas por constructor, ya que lo hace de forma automatica}
-    public ProductServiceImpl(ProductRepository repository) {
-        this.repository = repository;
-    }
+        // //@Autowired {por constructor, y de hecho no es necesario el @autowired si inyectas por constructor, ya que lo hace de forma automatica}
+         public ProductServiceImpl(@Qualifier("productFoo")ProductRepository repository) {
+             this.repository = repository;
+         }
 
     // @Autowired   {por setter}
     // public void setRepository(ProductRepository repository) {
