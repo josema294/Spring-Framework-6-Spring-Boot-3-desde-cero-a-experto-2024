@@ -37,12 +37,12 @@ public class ProductServiceImpl implements ProductService{
      
         return data.stream().map(p -> {
             double conIVA = p.getPrice() *1.25;
-            Product clonado = (Product) p.clonar();
-            clonado.setPrice(conIVA);
-            System.out.println("ProductServiceImpl.findAll()");
-            return clonado;
-            // p.setPrice(conIVA);
-            // return p;
+            // Product clonado = (Product) p.clonar();
+            // clonado.setPrice(conIVA);
+            // System.out.println("ProductServiceImpl.findAll()");
+            // return clonado;
+            p.setPrice(conIVA);
+            return p;
 
         }).collect(Collectors.toList());
     }
