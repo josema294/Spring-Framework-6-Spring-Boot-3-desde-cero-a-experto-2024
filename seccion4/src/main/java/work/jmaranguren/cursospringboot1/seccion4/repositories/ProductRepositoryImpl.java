@@ -5,11 +5,13 @@ import java.util.List;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.context.annotation.RequestScope;
 
 import work.jmaranguren.cursospringboot1.seccion4.models.Product;
 
 @Repository("productList")
 @Primary
+@RequestScope
 public class ProductRepositoryImpl implements ProductRepository {
 
     private List <Product> data;

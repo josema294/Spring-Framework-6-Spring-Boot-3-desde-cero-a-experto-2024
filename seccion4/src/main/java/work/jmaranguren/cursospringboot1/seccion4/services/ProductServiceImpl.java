@@ -18,7 +18,7 @@ public class ProductServiceImpl implements ProductService{
         private ProductRepository repository;
 
         // //@Autowired {por constructor, y de hecho no es necesario el @autowired si inyectas por constructor, ya que lo hace de forma automatica}
-         public ProductServiceImpl(@Qualifier("productFoo")ProductRepository repository) {
+         public ProductServiceImpl(@Qualifier("productList")ProductRepository repository) {
              this.repository = repository;
          }
 
@@ -41,7 +41,8 @@ public class ProductServiceImpl implements ProductService{
             clonado.setPrice(conIVA);
             System.out.println("ProductServiceImpl.findAll()");
             return clonado;
-
+            // p.setPrice(conIVA);
+            // return p;
 
         }).collect(Collectors.toList());
     }
