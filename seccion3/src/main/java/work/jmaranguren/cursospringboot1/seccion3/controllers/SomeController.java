@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot1.seccion4.controllers;
+package work.jmaranguren.cursospringboot1.seccion3.controllers;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import work.jmaranguren.cursospringboot1.seccion4.models.Product;
-import work.jmaranguren.cursospringboot1.seccion4.services.ProductService;
+import work.jmaranguren.cursospringboot1.seccion3.models.Product;
+import work.jmaranguren.cursospringboot1.seccion3.services.ProductService;
 
 @RestController
 public class SomeController {

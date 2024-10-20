@@ -1,8 +1,7 @@
-package work.jmaranguren.cursospringboot.seccion3;
+package work.jmaranguren.cursospringboot1.seccion3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 
 @SpringBootApplication
 public class Seccion3Application {

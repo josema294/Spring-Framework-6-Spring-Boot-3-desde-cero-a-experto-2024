@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot1.seccion4.repositories;
+package work.jmaranguren.cursospringboot1.seccion3.repositories;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.annotation.SessionScope;
 
-import work.jmaranguren.cursospringboot1.seccion4.models.Product;
+import work.jmaranguren.cursospringboot1.seccion3.models.Product;
 
 @Repository("productList")
 @Primary

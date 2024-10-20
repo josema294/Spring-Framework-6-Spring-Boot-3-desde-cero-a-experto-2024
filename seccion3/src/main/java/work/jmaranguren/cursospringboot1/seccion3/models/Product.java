@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot1.seccion4.models;
+package work.jmaranguren.cursospringboot1.seccion3.models;
 
 public class Product implements Cloneable {
 

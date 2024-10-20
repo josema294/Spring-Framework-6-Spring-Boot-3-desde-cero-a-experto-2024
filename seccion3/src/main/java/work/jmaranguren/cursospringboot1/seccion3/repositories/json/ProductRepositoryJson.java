@@ -1,4 +1,4 @@
-package work.jmaranguren.cursospringboot1.seccion4.repositories.json;
+package work.jmaranguren.cursospringboot1.seccion3.repositories.json;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -11,8 +11,8 @@ import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import work.jmaranguren.cursospringboot1.seccion4.models.Product;
-import work.jmaranguren.cursospringboot1.seccion4.repositories.ProductRepository;
+import work.jmaranguren.cursospringboot1.seccion3.models.Product;
+import work.jmaranguren.cursospringboot1.seccion3.repositories.ProductRepository;
 
 public class ProductRepositoryJson implements ProductRepository {
 
