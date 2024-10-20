@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>work.jmaranguren</groupId>
-	<artifactId>curso-springboot-seccion4</artifactId>
+	<artifactId>curso-springboot-seccion3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Curso Spring Boot seccion 4</name>
-	<description>Seccion 4, centrado en Inyeccion de dependencias</description>
+	<name>Curso Spring Boot seccion 3</name>
+	<description>Seccion 3, centrado en Inyeccion de dependencias</description>
 	<url/>
 	<licenses>
 		<license/>
