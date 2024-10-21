@@ -1,13 +1,17 @@
 package work.jmaranguren.factura.springboot_factura.models;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Client {
 
+    @Value("${client.name}")
     private String nombre;
-    private String Apellido;
+    @Value("${client.lastname}")
+    private String apellido;
 
+    
     public String getNombre() {
         return nombre;
     }
@@ -15,10 +19,10 @@ public class Client {
         this.nombre = nombre;
     }
     public String getApellido() {
-        return Apellido;
+        return apellido;
     }
     public void setApellido(String apellido) {
-        Apellido = apellido;
+        this.apellido = apellido;
     }
 
     
