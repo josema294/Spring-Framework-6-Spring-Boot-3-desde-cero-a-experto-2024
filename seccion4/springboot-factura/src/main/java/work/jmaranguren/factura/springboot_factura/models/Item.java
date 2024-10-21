@@ -5,6 +5,11 @@ public class Item {
     private Product pproducto;
     private Integer cantidad;
     
+
+    public Item(Product pproducto, Integer cantidad) {
+        this.pproducto = pproducto;
+        this.cantidad = cantidad;
+    }
     public Product getPproducto() {
         return pproducto;
     }
