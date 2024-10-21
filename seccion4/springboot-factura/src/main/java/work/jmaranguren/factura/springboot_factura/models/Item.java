@@ -23,6 +23,11 @@ public class Item {
         this.cantidad = cantidad;
     }
 
+    public int getImporte(){
+        
+        return cantidad * pproducto.getPrecio();
+    }
+
     
 
 }

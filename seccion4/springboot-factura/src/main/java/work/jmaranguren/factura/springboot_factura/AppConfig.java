@@ -11,7 +11,7 @@ import work.jmaranguren.factura.springboot_factura.models.Item;
 import work.jmaranguren.factura.springboot_factura.models.Product;
 
 @Configuration
-@PropertySource("classpath:date.properties")
+@PropertySource("classpath:data.properties")
 public class AppConfig {
 
 @Bean

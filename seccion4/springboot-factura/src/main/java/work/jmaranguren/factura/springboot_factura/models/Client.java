@@ -11,7 +11,6 @@ public class Client {
     @Value("${client.lastname}")
     private String apellido;
 
-    
     public String getNombre() {
         return nombre;
     }
